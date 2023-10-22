@@ -6,12 +6,16 @@ public class tar1{
         System.out.println("how much");
      
         int shirt= kelet.nextInt();
-        double cost = shirt *rate;
+        double cost = shirt * rate;
         System.out.println("your cost is " + cost);
-        kelet.close();        
+        kelet.close();   
 
     }
 
-    
 }
+<<<<<<< HEAD
 ח
+=======
+ 
+                                                                                                                                                                                         
+>>>>>>> ed6006b (10-22 update 0.5)

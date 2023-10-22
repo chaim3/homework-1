@@ -27,7 +27,9 @@ public class idc{
             case "-":
                 result = num1 - num2;
                 break;
-
         }
-        
-        System.out.println("The res
+    System.out.println("The result is " + result);
+
+    } 
+
+}
