@@ -1,5 +1,5 @@
 
-import java.util.*;
+// import java.util.*;
 import java.util.Scanner;
 public class radios {
     public static void ex1() {
@@ -25,22 +25,18 @@ public static void ex2() {
     
     System.out.print("Welcome to the Bread Shop");
     System.out.println(" The bread costs $12:");
-    System.out.println("If you want toppings we have:");
-    System.out.println(" Olives $"+ Oliveprice +"\n Corn $" + Cornprice + " \n Mushrooms $"+ Mushroomprice +"\n and\n Cheese $"+Cheeseprice+"\n and if you dont want any write 'None'");
-    System.out.println("Enter Your first Topping: ");
+    System.out.println(" If you want toppings we have:");
+    System.out.println(" Olives $"+ Oliveprice +"\n Corn $" + Cornprice + " \n Mushrooms $"+ Mushroomprice +"\n and\n Cheese $"+Cheeseprice+"\n and if you dont want any (or any more) write 'None'");
+    
+    // List<String> toppings = new ArrayList<String>();
 
-    List<String> toppings = new ArrayList<String>();
+    loop: for(int i=0; i<4; i++) {
 
-    toppings.add(s.next().toLowerCase());  
-    System.out.println("Enter Your Second Topping: ");
-    toppings.add(s.next().toLowerCase());
-    System.out.println("Enter Your Third Topping");
-    toppings.add(s.next().toLowerCase());
-    System.out.println("Enter Your Forth Choice");
-    toppings.add(s.next().toLowerCase());
+      int qNum = i+1;
+      System.out.println("Enter Topping " + qNum +": ");
+      String topping = s.next().toLowerCase();
 
-    for(String answer:toppings) {
-      switch (answer) {
+      switch (topping) {
         case "olives":
             Breadcost += Oliveprice;
         break;
@@ -58,12 +54,13 @@ public static void ex2() {
         break; 
 
         case "none":
-        break;
+        break loop;
 
         default:
-            System.out.println("\n" + answer + " is not an option.\n");
-      }
-    }  
+            System.out.println("\n" + topping + " is not an option.\n");
+            i--;
+      } // End Switch
+    }  // End Loop
      
     s.close();
 
