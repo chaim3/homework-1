@@ -1,4 +1,3 @@
-
 // import java.util.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
@@ -9,7 +8,7 @@ public static void Travel() {
         double start_fee = 10.5;
         double price_KM = 3.5;
         double price_luggage = 2;
-        
+
         Scanner t = new Scanner(System.in);
         System.out.println("Welcome to the Traveling Agency");
         System.out.println("Theres a starting fee of $10.5 ");      
@@ -42,23 +41,23 @@ public static void Radius() {
 public static void breadShop() {
     Scanner s = new Scanner(System.in);
 
-    
+
     int Breadcost = 12;
     final int Oliveprice = 2;
     final int Cornprice = 2;
     final int Mushroomprice = 2;
     final int Cheeseprice = 3;
-    
+
     System.out.print("Welcome to the Bread Shop.\n");
     System.out.println(" The bread costs $12:");
     System.out.println(" If you want toppings, we have:");
     System.out.println(" - Olives    $"+ Oliveprice +"\n - Corn      $" + Cornprice + " \n - Mushrooms $"+ Mushroomprice +"\n - Cheese    $"+Cheeseprice+"\n ** if you dont want any (or any more) write 'Done'");
-    
+
     // List<String> toppings = new ArrayList<String>();
 
     loop: for(int i=0; i<=4; i++) {
 
-      
+
       System.out.println("Enter Topping: ");
       String topping = s.next().toLowerCase();
 
@@ -66,15 +65,15 @@ public static void breadShop() {
         case "olives":
             Breadcost += Oliveprice;
         break;
-    
+
         case "corn":
             Breadcost += Cornprice;
         break;
-        
+
         case "mushrooms":
             Breadcost += Mushroomprice;
         break;
-        
+
         case "cheese":
             Breadcost += Cheeseprice;
         break; 
@@ -84,15 +83,15 @@ public static void breadShop() {
 
         default:
             System.out.println("\n" + topping + " is not an option.\n");
-            
+
       } // End Switch
     }  // End Loop
-     
+
     s.close();
 
     System.out.println("That will cost you: "+ Breadcost);
 
-    
+
 }
 
 //Jumper
@@ -111,7 +110,7 @@ public static void Jumper() {
         }
 
     }
-    
+
 //Candy    
 public static void Candy(){
         Scanner s = new Scanner(System.in);
@@ -131,7 +130,7 @@ public static void Candy(){
         else{
             System.out.println("You dont have enough candy");
         }
-
+        s.close();
 }
 
 //Buses
@@ -147,8 +146,8 @@ public static void Buses(){
         buses = Math.ceil(buses);
         String b = d.format(buses);
         System.out.println("You need "+ b +" bus:");
-        
-     
+        s.close();
+
     }
 
 //Lottery
@@ -156,7 +155,7 @@ public static void Lottery(){
       Scanner s = new Scanner(System.in);
       System.out.println("What is the last 2 digits of your lottery ticket:");
       int lot = s.nextInt();
-     
+
       if(lot == 25){
           System.out.println("You won 111 NIS!!");
       }
@@ -166,6 +165,7 @@ public static void Lottery(){
       else{
         System.out.println("You lost");
       }
+    s.close();
     }
 //To use the code;'lkpjm'    
 public static void main(String[] args) {
@@ -180,4 +180,3 @@ public static void main(String[] args) {
 
 }
 }
-
